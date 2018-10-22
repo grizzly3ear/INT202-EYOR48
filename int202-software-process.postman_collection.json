@@ -1,0 +1,93 @@
+{
+	"info": {
+		"_postman_id": "60836578-be81-4fe3-85dd-fc11306321bc",
+		"name": "int202-software-process",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET \"Hello Software Pro I\"",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "683af904-824b-419d-8217-8edd51222b52",
+						"exec": [
+							"pm.test(\"GET Hello software pro I is success!\", function() {",
+							"    var jsonData = pm.response.json();",
+							"    var helloWord = jsonData;",
+							"    pm.expect(helloWord).to.eql(\"Hello, Software Development Process I\");",
+							"",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/int202/hello",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"int202",
+						"hello"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "GET \"Hello Software Pro I\"",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/int202/hello",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"int202",
+								"hello"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain;charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "37"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 22 Oct 2018 16:50:56 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "Hello, Software Development Process I"
+				}
+			]
+		}
+	]
+}
